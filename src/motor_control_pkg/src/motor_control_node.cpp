@@ -93,13 +93,13 @@ private:
                     }
                     RCLCPP_INFO(get_logger(), "%s: Updated target_positions: [%s]", motor_name.c_str(), pos_str.c_str());
                 } else if (param.name == "speed") {
-                    motor_data_[motor_id].speed_ = param.value.integer_value;
+                    motor_data_[motor_id].speed_ = static_cast<float>(param.value.double_value);
                     RCLCPP_INFO(get_logger(), "%s: Updated speed: %d", motor_name.c_str(), motor_data_[motor_id].speed_);
                 } else if (param.name == "accel") {
-                    motor_data_[motor_id].accel_ = param.value.integer_value;
+                    motor_data_[motor_id].accel_ = static_cast<float>(param.value.double_value);
                     RCLCPP_INFO(get_logger(), "%s: Updated accel: %d", motor_name.c_str(), motor_data_[motor_id].accel_);
                 } else if (param.name == "rpm_step") {
-                    motor_data_[motor_id].rpm_step_ = param.value.integer_value;
+                    motor_data_[motor_id].rpm_step_ = static_cast<float>(param.value.double_value);
                     RCLCPP_INFO(get_logger(), "%s: Updated rpm_step: %.2f", motor_name.c_str(), motor_data_[motor_id].rpm_step_);
                 } else if (param.name == "repeat") {
                     motor_data_[motor_id].repeat_ = param.value.integer_value;
