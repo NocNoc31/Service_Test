@@ -46,8 +46,8 @@ private:
         bool target_reached_;
         size_t current_target_index_;
         int repeat_counter_;
-        int speed_;
-        int accel_;
+        float speed_;
+        float accel_;
         float rpm_step_;
         int repeat_;
     };
@@ -94,10 +94,10 @@ private:
                     RCLCPP_INFO(get_logger(), "%s: Updated target_positions: [%s]", motor_name.c_str(), pos_str.c_str());
                 } else if (param.name == "speed") {
                     motor_data_[motor_id].speed_ = static_cast<float>(param.value.double_value);
-                    RCLCPP_INFO(get_logger(), "%s: Updated speed: %d", motor_name.c_str(), motor_data_[motor_id].speed_);
+                    RCLCPP_INFO(get_logger(), "%s: Updated speed: %f", motor_name.c_str(), motor_data_[motor_id].speed_);
                 } else if (param.name == "accel") {
                     motor_data_[motor_id].accel_ = static_cast<float>(param.value.double_value);
-                    RCLCPP_INFO(get_logger(), "%s: Updated accel: %d", motor_name.c_str(), motor_data_[motor_id].accel_);
+                    RCLCPP_INFO(get_logger(), "%s: Updated accel: %f", motor_name.c_str(), motor_data_[motor_id].accel_);
                 } else if (param.name == "rpm_step") {
                     motor_data_[motor_id].rpm_step_ = static_cast<float>(param.value.double_value);
                     RCLCPP_INFO(get_logger(), "%s: Updated rpm_step: %.2f", motor_name.c_str(), motor_data_[motor_id].rpm_step_);
@@ -128,7 +128,7 @@ private:
 
             // Giả lập điều khiển động cơ
             if (motor.current_target_index_ < motor.target_positions_.size()) {
-                RCLCPP_INFO(get_logger(), "%s: Moving to position %.2f with speed %d, accel %d, rpm_step %.2f",
+                RCLCPP_INFO(get_logger(), "%s: Moving to position %.2f with speed %f, accel %f, rpm_step %.2f",
                             motor_name.c_str(), motor.target_positions_[motor.current_target_index_],
                             motor.speed_, motor.accel_, motor.rpm_step_);
                 motor.current_target_index_++;
