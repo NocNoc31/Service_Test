@@ -1,0 +1,16 @@
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/lib/motor_control_pkg/motor_control_node
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/package_run_dependencies/motor_control_pkg
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/parent_prefix_path/motor_control_pkg
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.sh
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.dsv
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.sh
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.dsv
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.bash
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.sh
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.zsh
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.dsv
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.dsv
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/packages/motor_control_pkg
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig.cmake
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig-version.cmake
+/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.xml
