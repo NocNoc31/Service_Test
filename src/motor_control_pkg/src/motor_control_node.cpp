@@ -1,135 +1,149 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rcl_interfaces/srv/set_parameters.hpp"
-#include "rcl_interfaces/msg/parameter.hpp"
 #include <vector>
-#include <string>
-#include <sstream>
+#include <memory>
+#include <algorithm>
+#include <stdexcept>
 
-class MotorControlNode : public rclcpp::Node
-{
+class MotorControlNode : public rclcpp::Node {
 public:
-  MotorControlNode() : Node("motor_control_node")
-  {
-    // Declare parameters with default values
-    declare_parameter("motor1.target_positions", std::vector<double>{0.0});
-    declare_parameter("motor1.speed", 0.0);
-    declare_parameter("motor1.accel", 0.0);
-    declare_parameter("motor1.min_angle", 0.0);
-    declare_parameter("motor1.max_angle", 0.0);
-    declare_parameter("motor1.rpm_step", 0.0);
-    declare_parameter("motor1.reach_count_max", 0);
-    declare_parameter("motor1.repeat", false);
+    MotorControlNode() : Node("motor_control_node") {
+        // Khởi tạo giá trị mặc định cho mỗi động cơ
+        motor_data_.resize(2); // Hai động cơ
+        for (size_t i = 0; i < motor_data_.size(); ++i) {
+            motor_data_[i] = {
+                {},          // target_positions_
+                false,       // target_reached_
+                0,           // current_target_index_
+                0,           // repeat_counter_
+                0,           // speed_
+                0,           // accel_
+                0.0f,        // rpm_step_
+                0            // repeat_
+            };
+        }
 
-    declare_parameter("motor2.target_positions", std::vector<double>{0.0});
-    declare_parameter("motor2.speed", 0.0);
-    declare_parameter("motor2.accel", 0.0);
-    declare_parameter("motor2.min_angle", 0.0);
-    declare_parameter("motor2.max_angle", 0.0);
-    declare_parameter("motor2.rpm_step", 0.0);
-    declare_parameter("motor2.reach_count_max", 0);
-    declare_parameter("motor2.repeat", false);
+        // Tạo service cho hai động cơ
+        services_.push_back(create_service<rcl_interfaces::srv::SetParameters>(
+            "/motor1_control_node/set_parameters",
+            std::bind(&MotorControlNode::setParametersCallback, this, std::placeholders::_1,
+                      std::placeholders::_2, 0)));
+        services_.push_back(create_service<rcl_interfaces::srv::SetParameters>(
+            "/motor2_control_node/set_parameters",
+            std::bind(&MotorControlNode::setParametersCallback, this, std::placeholders::_1,
+                      std::placeholders::_2, 1)));
 
-    // Create services
-    services_.push_back(create_service<rcl_interfaces::srv::SetParameters>(
-        "/motor1_control_node/set_parameters",
-        std::bind(&MotorControlNode::setParametersCallback, this, std::placeholders::_1,
-                  std::placeholders::_2, 0)));
-    services_.push_back(create_service<rcl_interfaces::srv::SetParameters>(
-        "/motor2_control_node/set_parameters",
-        std::bind(&MotorControlNode::setParametersCallback, this, std::placeholders::_1,
-                  std::placeholders::_2, 1)));
+        // Timer để giả lập điều khiển động cơ
+        timer_ = create_wall_timer(std::chrono::milliseconds(100),
+                                   std::bind(&MotorControlNode::controlLoop, this));
 
-    RCLCPP_INFO(this->get_logger(), "Motor Control Node Started");
-  }
+        RCLCPP_INFO(get_logger(), "MotorControlNode initialized with 2 motor services");
+    }
 
 private:
-  void setParametersCallback(
-      const std::shared_ptr<rcl_interfaces::srv::SetParameters::Request> request,
-      std::shared_ptr<rcl_interfaces::srv::SetParameters::Response> response,
-      int motor_index)
-  {
-    std::string param_prefix = (motor_index == 0) ? "motor1." : "motor2.";
-    
-    for (const auto &param : request->parameters) {
-      try {
-        set_parameter(rclcpp::Parameter(param_prefix + param.name, param.value));
-        RCLCPP_INFO(this->get_logger(), "Set %s%s to %s", 
-                    param_prefix.c_str(), param.name.c_str(), 
-                    parameter_value_to_string(param.value).c_str());
-        response->results.push_back(rcl_interfaces::msg::SetParametersResult().set__successful(true));
-      } catch (const std::exception &e) {
-        RCLCPP_ERROR(this->get_logger(), "Failed to set %s%s: %s", 
-                     param_prefix.c_str(), param.name.c_str(), e.what());
-        response->results.push_back(rcl_interfaces::msg::SetParametersResult()
-                                   .set__successful(false)
-                                   .set__reason(e.what()));
-      }
-    }
+    struct MotorData {
+        std::vector<float> target_positions_;
+        bool target_reached_;
+        size_t current_target_index_;
+        int repeat_counter_;
+        int speed_;
+        int accel_;
+        float rpm_step_;
+        int repeat_;
+    };
 
-    // Log current parameter values
-    std::vector<double> temp_positions;
-    double speed, accel, min_angle, max_angle, rpm_step;
-    int reach_count_max;
-    bool repeat;
+    std::vector<MotorData> motor_data_;
+    std::vector<rclcpp::Service<rcl_interfaces::srv::SetParameters>::SharedPtr> services_;
+    rclcpp::TimerBase::SharedPtr timer_;
 
-    get_parameter(param_prefix + "target_positions", temp_positions);
-    get_parameter(param_prefix + "speed", speed);
-    get_parameter(param_prefix + "accel", accel);
-    get_parameter(param_prefix + "min_angle", min_angle);
-    get_parameter(param_prefix + "max_angle", max_angle);
-    get_parameter(param_prefix + "rpm_step", rpm_step);
-    get_parameter(param_prefix + "reach_count_max", reach_count_max);
-    get_parameter(param_prefix + "repeat", repeat);
+    void setParametersCallback(
+        const std::shared_ptr<rcl_interfaces::srv::SetParameters::Request> request,
+        std::shared_ptr<rcl_interfaces::srv::SetParameters::Response> response,
+        size_t motor_id) {
+        std::string motor_name = (motor_id == 0) ? "Motor 1" : "Motor 2";
+        RCLCPP_INFO(get_logger(), "%s: Received set_parameters request", motor_name.c_str());
 
-    RCLCPP_INFO(this->get_logger(), "%s Parameters: target_positions=%s, speed=%f, accel=%f, min_angle=%f, max_angle=%f, rpm_step=%f, reach_count_max=%d, repeat=%d",
-                param_prefix.c_str(), format_vector(temp_positions).c_str(), 
-                speed, accel, min_angle, max_angle, rpm_step, reach_count_max, repeat);
-  }
-
-  std::string format_vector(const std::vector<double> &vec) {
-    std::string result = "[";
-    for (size_t i = 0; i < vec.size(); ++i) {
-      result += std::to_string(vec[i]);
-      if (i < vec.size() - 1) result += ", ";
-    }
-    result += "]";
-    return result;
-  }
-
-  std::string parameter_value_to_string(const rcl_interfaces::msg::ParameterValue &value) {
-    std::stringstream ss;
-    switch (value.type) {
-      case 1: // Bool
-        ss << (value.bool_value ? "true" : "false");
-        break;
-      case 2: // Integer
-        ss << value.integer_value;
-        break;
-      case 3: // Double
-        ss << value.double_value;
-        break;
-      case 7: // Double array
-        ss << "[";
-        for (size_t i = 0; i < value.double_array_value.size(); ++i) {
-          ss << value.double_array_value[i];
-          if (i < value.double_array_value.size() - 1) ss << ", ";
+        if (motor_id >= motor_data_.size()) {
+            RCLCPP_ERROR(get_logger(), "%s: Invalid motor index: %zu", motor_name.c_str(), motor_id);
+            response->results.resize(request->parameters.size());
+            for (size_t i = 0; i < request->parameters.size(); ++i) {
+                response->results[i].successful = false;
+                response->results[i].reason = "Invalid motor index";
+            }
+            return;
         }
-        ss << "]";
-        break;
-      default:
-        ss << "unknown";
-        break;
-    }
-    return ss.str();
-  }
 
-  std::vector<rclcpp::Service<rcl_interfaces::srv::SetParameters>::SharedPtr> services_;
+        response->results.resize(request->parameters.size());
+        for (size_t i = 0; i < request->parameters.size(); ++i) {
+            const auto& param = request->parameters[i];
+            RCLCPP_INFO(get_logger(), "%s: Processing parameter: %s", motor_name.c_str(), param.name.c_str());
+            try {
+                if (param.name == "target_positions") {
+                    auto temp_positions = param.value.double_array_value;
+                    motor_data_[motor_id].target_positions_.resize(temp_positions.size());
+                    std::transform(temp_positions.begin(), temp_positions.end(),
+                                   motor_data_[motor_id].target_positions_.begin(),
+                                   [](double x) { return static_cast<float>(x); });
+                    motor_data_[motor_id].target_reached_ = false;
+                    motor_data_[motor_id].current_target_index_ = 0;
+                    motor_data_[motor_id].repeat_counter_ = 0;
+                    std::string pos_str;
+                    for (double pos : temp_positions) {
+                        pos_str += std::to_string(pos) + " ";
+                    }
+                    RCLCPP_INFO(get_logger(), "%s: Updated target_positions: [%s]", motor_name.c_str(), pos_str.c_str());
+                } else if (param.name == "speed") {
+                    motor_data_[motor_id].speed_ = param.value.integer_value;
+                    RCLCPP_INFO(get_logger(), "%s: Updated speed: %d", motor_name.c_str(), motor_data_[motor_id].speed_);
+                } else if (param.name == "accel") {
+                    motor_data_[motor_id].accel_ = param.value.integer_value;
+                    RCLCPP_INFO(get_logger(), "%s: Updated accel: %d", motor_name.c_str(), motor_data_[motor_id].accel_);
+                } else if (param.name == "rpm_step") {
+                    motor_data_[motor_id].rpm_step_ = param.value.integer_value;
+                    RCLCPP_INFO(get_logger(), "%s: Updated rpm_step: %.2f", motor_name.c_str(), motor_data_[motor_id].rpm_step_);
+                } else if (param.name == "repeat") {
+                    motor_data_[motor_id].repeat_ = param.value.integer_value;
+                    motor_data_[motor_id].repeat_counter_ = 0;
+                    RCLCPP_INFO(get_logger(), "%s: Updated repeat: %d", motor_name.c_str(), motor_data_[motor_id].repeat_);
+                } else {
+                    RCLCPP_WARN(get_logger(), "%s: Unknown parameter: %s", motor_name.c_str(), param.name.c_str());
+                }
+                response->results[i].successful = true;
+                response->results[i].reason = "";
+            } catch (const std::exception& e) {
+                response->results[i].successful = false;
+                response->results[i].reason = e.what();
+                RCLCPP_ERROR(get_logger(), "%s: %s", motor_name.c_str(), e.what());
+            }
+        }
+    }
+
+    void controlLoop() {
+        for (size_t motor_id = 0; motor_id < motor_data_.size(); ++motor_id) {
+            std::string motor_name = (motor_id == 0) ? "Motor 1" : "Motor 2";
+            auto& motor = motor_data_[motor_id];
+            if (motor.target_positions_.empty()) {
+                continue;
+            }
+
+            // Giả lập điều khiển động cơ
+            if (motor.current_target_index_ < motor.target_positions_.size()) {
+                RCLCPP_INFO(get_logger(), "%s: Moving to position %.2f with speed %d, accel %d, rpm_step %.2f",
+                            motor_name.c_str(), motor.target_positions_[motor.current_target_index_],
+                            motor.speed_, motor.accel_, motor.rpm_step_);
+                motor.current_target_index_++;
+            }
+        }
+    }
 };
 
-int main(int argc, char *argv[])
-{
-  rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MotorControlNode>());
-  rclcpp::shutdown();
-  return 0;
+int main(int argc, char** argv) {
+    rclcpp::init(argc, argv);
+    try {
+        rclcpp::spin(std::make_shared<MotorControlNode>());
+    } catch (const std::exception& e) {
+        RCLCPP_ERROR(rclcpp::get_logger("motor_control_node"), "Fatal error: %s", e.what());
+    }
+    rclcpp::shutdown();
+    return 0;
 }

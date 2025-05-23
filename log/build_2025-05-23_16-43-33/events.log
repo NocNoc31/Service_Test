@@ -1,0 +1,76 @@
+[0.000000] (-) TimerEvent: {}
+[0.000313] (motor_control_pkg) JobQueued: {'identifier': 'motor_control_pkg', 'dependencies': OrderedDict()}
+[0.000337] (motor_control_pkg) JobStarted: {'identifier': 'motor_control_pkg'}
+[0.009791] (motor_control_pkg) JobProgress: {'identifier': 'motor_control_pkg', 'progress': 'cmake'}
+[0.010728] (motor_control_pkg) JobProgress: {'identifier': 'motor_control_pkg', 'progress': 'build'}
+[0.011458] (motor_control_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg', '--', '-j8', '-l8'], 'cwd': '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'ubuntu'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ubuntu'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1804'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bdc42940b4ad2a6feaa60638682fc4a7'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.local/share/pnpm:/opt/ros/humble/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu-Aspire-A315-58:@/tmp/.ICE-unix/1804,unix/ubuntu-Aspire-A315-58:/tmp/.ICE-unix/1804'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/98cafadd_7c06_4476_bb04_559ff2c49818'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.2HHQ62'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.280'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=bdc42940b4ad2a6feaa60638682fc4a7'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('PNPM_HOME', '/home/ubuntu/.local/share/pnpm'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099880] (-) TimerEvent: {}
+[0.104015] (motor_control_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target motor_control_node\x1b[0m\n'}
+[0.133903] (motor_control_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o\x1b[0m\n'}
+[0.200000] (-) TimerEvent: {}
+[0.300360] (-) TimerEvent: {}
+[0.400697] (-) TimerEvent: {}
+[0.473271] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextended character \xc2\xb6 is not valid in an identifier\n'}
+[0.473575] (motor_control_pkg) StderrLine: {'line': b'   52 |     for (const auto \x1b[01;31m\x1b[K\xc2\xb6\x1b[m\x1b[Km : request->parameters) {\n'}
+[0.473693] (motor_control_pkg) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.500867] (-) TimerEvent: {}
+[0.601183] (-) TimerEvent: {}
+[0.701562] (-) TimerEvent: {}
+[0.801920] (-) TimerEvent: {}
+[0.902269] (-) TimerEvent: {}
+[1.002586] (-) TimerEvent: {}
+[1.102874] (-) TimerEvent: {}
+[1.203171] (-) TimerEvent: {}
+[1.303648] (-) TimerEvent: {}
+[1.404222] (-) TimerEvent: {}
+[1.504585] (-) TimerEvent: {}
+[1.604971] (-) TimerEvent: {}
+[1.705321] (-) TimerEvent: {}
+[1.805731] (-) TimerEvent: {}
+[1.906439] (-) TimerEvent: {}
+[2.007203] (-) TimerEvent: {}
+[2.108336] (-) TimerEvent: {}
+[2.209333] (-) TimerEvent: {}
+[2.309976] (-) TimerEvent: {}
+[2.410921] (-) TimerEvent: {}
+[2.511253] (-) TimerEvent: {}
+[2.611593] (-) TimerEvent: {}
+[2.688708] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotorControlNode::setParametersCallback(std::shared_ptr<rcl_interfaces::srv::SetParameters_Request_<std::allocator<void> > >, std::shared_ptr<rcl_interfaces::srv::SetParameters_Response_<std::allocator<void> > >, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.688955] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kloop variable \xe2\x80\x98\x1b[01m\x1b[K\xc2\xb6m\x1b[m\x1b[K\xe2\x80\x99 creates a copy from type \xe2\x80\x98\x1b[01m\x1b[Kconst rcl_interfaces::msg::Parameter_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wrange-loop-construct\x07-Wrange-loop-construct\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.689025] (motor_control_pkg) StderrLine: {'line': b'   52 |     for (const auto \x1b[01;35m\x1b[K\xc2\xb6m\x1b[m\x1b[K : request->parameters) {\n'}
+[2.689075] (motor_control_pkg) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.689119] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kuse reference type to prevent copying\n'}
+[2.689186] (motor_control_pkg) StderrLine: {'line': b'   52 |     for (const auto \x1b[01;36m\x1b[K\xc2\xb6m\x1b[m\x1b[K : request->parameters) {\n'}
+[2.689235] (motor_control_pkg) StderrLine: {'line': b'      |                     \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.689282] (motor_control_pkg) StderrLine: {'line': b'      |                     \x1b[32m\x1b[K&\x1b[m\x1b[K\n'}
+[2.693927] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:54:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.694083] (motor_control_pkg) StderrLine: {'line': b'   54 |         set_parameter(rclcpp::Parameter(param_prefix + \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.name, param.value));\n'}
+[2.694128] (motor_control_pkg) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.699812] (motor_control_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.700025] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.700097] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.700157] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.700215] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.700275] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.700331] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.700392] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.700462] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.700543] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.700610] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.700681] (motor_control_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[2.700751] (motor_control_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:59:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.700817] (motor_control_pkg) StderrLine: {'line': b'   59 |                      param_prefix.c_str(), \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.name.c_str(), e.what());\n'}
+[2.700883] (motor_control_pkg) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.711701] (-) TimerEvent: {}
+[2.812043] (-) TimerEvent: {}
+[2.912477] (-) TimerEvent: {}
+[3.012807] (-) TimerEvent: {}
+[3.113119] (-) TimerEvent: {}
+[3.213447] (-) TimerEvent: {}
+[3.313846] (-) TimerEvent: {}
+[3.351599] (motor_control_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motor_control_node.dir/build.make:76: CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o] Error 1\n'}
+[3.351849] (motor_control_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_control_node.dir/all] Error 2\n'}
+[3.352011] (motor_control_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.354652] (motor_control_pkg) CommandEnded: {'returncode': 2}
+[3.373900] (motor_control_pkg) JobEnded: {'identifier': 'motor_control_pkg', 'rc': 2}
+[3.384445] (-) EventReactorShutdown: {}

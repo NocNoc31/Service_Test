@@ -1,0 +1,26 @@
+[0.008s] Invoking command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg -- -j8 -l8
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target motor_control_node[0m
+[0.051s] [ 50%] [32mBuilding CXX object CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o[0m
+[2.787s] [100%] [32m[1mLinking CXX executable motor_control_node[0m
+[2.905s] [100%] Built target motor_control_node
+[2.913s] Invoked command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg -- -j8 -l8
+[2.920s] Invoking command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg
+[2.927s] -- Install configuration: ""
+[2.927s] -- Installing: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/lib/motor_control_pkg/motor_control_node
+[2.927s] -- Set runtime path of "/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/lib/motor_control_pkg/motor_control_node" to ""
+[2.927s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/package_run_dependencies/motor_control_pkg
+[2.927s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/parent_prefix_path/motor_control_pkg
+[2.927s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.sh
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.dsv
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.sh
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.dsv
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.bash
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.sh
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.zsh
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.dsv
+[2.928s] -- Installing: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.dsv
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/packages/motor_control_pkg
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig.cmake
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig-version.cmake
+[2.928s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.xml
+[2.929s] Invoked command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg

@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target motor_control_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o[0m
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:[m[K [01;31m[Kerror: [m[Kextended character ¶ is not valid in an identifier
+   52 |     for (const auto [01;31m[K¶[m[Km : request->parameters) {
+      |                     [01;31m[K^[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::setParametersCallback(std::shared_ptr<rcl_interfaces::srv::SetParameters_Request_<std::allocator<void> > >, std::shared_ptr<rcl_interfaces::srv::SetParameters_Response_<std::allocator<void> > >, int)[m[K’:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:[m[K [01;35m[Kwarning: [m[Kloop variable ‘[01m[K¶m[m[K’ creates a copy from type ‘[01m[Kconst rcl_interfaces::msg::Parameter_<std::allocator<void> >[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wrange-loop-construct-Wrange-loop-construct]8;;[m[K]
+   52 |     for (const auto [01;35m[K¶m[m[K : request->parameters) {
+      |                     [01;35m[K^~[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:52:21:[m[K [01;36m[Knote: [m[Kuse reference type to prevent copying
+   52 |     for (const auto [01;36m[K¶m[m[K : request->parameters) {
+      |                     [01;36m[K^~[m[K
+      |                     [32m[K&[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:54:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope
+   54 |         set_parameter(rclcpp::Parameter(param_prefix + [01;31m[Kparam[m[K.name, param.value));
+      |                                                        [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:59:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope
+   59 |                      param_prefix.c_str(), [01;31m[Kparam[m[K.name.c_str(), e.what());
+      |                                            [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_control_node.dir/build.make:76: CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

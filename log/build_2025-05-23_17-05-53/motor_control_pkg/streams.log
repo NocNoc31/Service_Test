@@ -1,0 +1,46 @@
+[0.010s] Invoking command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg -- -j8 -l8
+[0.100s] [35m[1mConsolidate compiler generated dependencies of target motor_control_node[0m
+[0.126s] [ 50%] [32mBuilding CXX object CMakeFiles/motor_control_node.dir/src/motor_control_node.cpp.o[0m
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::validatePositions(const std::vector<double, std::allocator<double> >&)[m[K’:
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:134:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpositions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.139s]   134 |     void validatePositions([01;35m[Kconst std::vector<double>& positions[m[K) {
+[2.139s]       |                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::validateSpeed(int)[m[K’:
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:138:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kspeed[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.139s]   138 |     void validateSpeed([01;35m[Kint speed[m[K) {
+[2.139s]       |                        [01;35m[K~~~~^~~~~[m[K
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::validateAccel(int)[m[K’:
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:142:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kaccel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.139s]   142 |     void validateAccel([01;35m[Kint accel[m[K) {
+[2.139s]       |                        [01;35m[K~~~~^~~~~[m[K
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::validateRPMStep(float)[m[K’:
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:146:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krpm_step[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.139s]   146 |     void validateRPMStep([01;35m[Kfloat rpm_step[m[K) {
+[2.139s]       |                          [01;35m[K~~~~~~^~~~~~~~[m[K
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::validateRepeat(int)[m[K’:
+[2.139s] [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:150:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krepeat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.139s]   150 |     void validateRepeat([01;35m[Kint repeat[m[K) {
+[2.139s]       |                         [01;35m[K~~~~^~~~~~[m[K
+[3.179s] [100%] [32m[1mLinking CXX executable motor_control_node[0m
+[3.327s] [100%] Built target motor_control_node
+[3.337s] Invoked command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg -- -j8 -l8
+[3.349s] Invoking command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg
+[3.355s] -- Install configuration: ""
+[3.355s] -- Installing: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/lib/motor_control_pkg/motor_control_node
+[3.357s] -- Set runtime path of "/home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/lib/motor_control_pkg/motor_control_node" to ""
+[3.357s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/package_run_dependencies/motor_control_pkg
+[3.357s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/parent_prefix_path/motor_control_pkg
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.sh
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/ament_prefix_path.dsv
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.sh
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/environment/path.dsv
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.bash
+[3.358s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.sh
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.zsh
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/local_setup.dsv
+[3.359s] -- Installing: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.dsv
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/ament_index/resource_index/packages/motor_control_pkg
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig.cmake
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/cmake/motor_control_pkgConfig-version.cmake
+[3.359s] -- Up-to-date: /home/ubuntu/Desktop/ros2_service_ws/install/motor_control_pkg/share/motor_control_pkg/package.xml
+[3.362s] Invoked command in '/home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/Desktop/ros2_service_ws/build/motor_control_pkg

@@ -1,0 +1,271 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::setParametersCallback(std::shared_ptr<rcl_interfaces::srv::SetParameters_Request_<std::allocator<void> > >, std::shared_ptr<rcl_interfaces::srv::SetParameters_Response_<std::allocator<void> > >, size_t)[m[K’:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:113:39:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  113 |             RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Processing parameter: %s"[m[K, [32m[Kmotor_id[m[K, param.name.c_str());
+      |                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~[m[K
+      |                                                                                 [32m[K|[m[K
+      |                                                                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:113:51:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  113 |             RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Processing parameter: %s", motor_id, param.name.c_str());
+      |                                                [01;36m[K~~~^[m[K
+      |                                                   [01;36m[K|[m[K
+      |                                                   [01;36m[Kunsigned int[m[K
+      |                                                [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:125:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  125 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Updated target_positions: %ld targets"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  126 |                                 [32m[Kmotor_id[m[K, temp_positions.size());
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:125:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  125 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Updated target_positions: %ld targets",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:130:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  130 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Updated speed: %d"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  131 |                                 [32m[Kmotor_id[m[K, motor_data_[motor_id].speed_);
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:130:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  130 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Updated speed: %d",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:135:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  135 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Updated accel: %d"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  136 |                                 [32m[Kmotor_id[m[K, motor_data_[motor_id].accel_);
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:135:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  135 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Updated accel: %d",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:140:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Updated rpm_step: %.2f"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  141 |                                 [32m[Kmotor_id[m[K, motor_data_[motor_id].rpm_step_);
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:140:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Updated rpm_step: %.2f",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:146:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  146 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Updated repeat: %d"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  147 |                                 [32m[Kmotor_id[m[K, motor_data_[motor_id].repeat_);
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:146:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  146 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Updated repeat: %d",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:149:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  149 |                     RCLCPP_WARN(get_logger(), [01;35m[K"Motor 0x%02X: Unknown parameter: %s"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  150 |                                 [32m[Kmotor_id[m[K, param.name.c_str());
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:149:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  149 |                     RCLCPP_WARN(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Unknown parameter: %s",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:157:44:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  157 |                 RCLCPP_ERROR(get_logger(), [01;35m[K"Motor 0x%02X: %s"[m[K, [32m[Kmotor_id[m[K, e.what());
+      |                                            [01;35m[K^~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~[m[K
+      |                                                                [32m[K|[m[K
+      |                                                                [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:157:56:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  157 |                 RCLCPP_ERROR(get_logger(), "Motor 0x[01;36m[K%02X[m[K: %s", motor_id, e.what());
+      |                                                     [01;36m[K~~~^[m[K
+      |                                                        [01;36m[K|[m[K
+      |                                                        [01;36m[Kunsigned int[m[K
+      |                                                     [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:[m[K In member function ‘[01m[Kvoid MotorControlNode::controlLoop()[m[K’:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:171:43:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  171 |                 RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Moving to position %.2f with speed %d, accel %d, rpm_step %.2f"[m[K,
+      |                                           [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  172 |                             [32m[Kmotor_id[m[K, motor.target_positions_[motor.current_target_index_],
+      |                             [32m[K~~~~~~~~[m[K       
+      |                             [32m[K|[m[K
+      |                             [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:171:55:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  171 |                 RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Moving to position %.2f with speed %d, accel %d, rpm_step %.2f",
+      |                                                    [01;36m[K~~~^[m[K
+      |                                                       [01;36m[K|[m[K
+      |                                                       [01;36m[Kunsigned int[m[K
+      |                                                    [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:182:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  182 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Repeating sequence, count %d/%d"[m[K,
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  183 |                                 [32m[Kmotor_id[m[K, motor.repeat_counter_ + 1, motor.repeat_);
+      |                                 [32m[K~~~~~~~~[m[K       
+      |                                 [32m[K|[m[K
+      |                                 [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:182:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  182 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Repeating sequence, count %d/%d",
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:1[m[K:
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:186:47:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%X[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  186 |                     RCLCPP_INFO(get_logger(), [01;35m[K"Motor 0x%02X: Target sequence completed"[m[K, [32m[Kmotor_id[m[K);
+      |                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~[m[K
+      |                                                                                          [32m[K|[m[K
+      |                                                                                          [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/ubuntu/Desktop/ros2_service_ws/src/motor_control_pkg/src/motor_control_node.cpp:186:59:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  186 |                     RCLCPP_INFO(get_logger(), "Motor 0x[01;36m[K%02X[m[K: Target sequence completed", motor_id);
+      |                                                        [01;36m[K~~~^[m[K
+      |                                                           [01;36m[K|[m[K
+      |                                                           [01;36m[Kunsigned int[m[K
+      |                                                        [32m[K%02lX[m[K
