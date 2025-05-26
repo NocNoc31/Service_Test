@@ -46,8 +46,8 @@ private:
         bool target_reached_;
         size_t current_target_index_;
         int repeat_counter_;
-        float speed_;
-        float accel_;
+        double speed_;
+        double accel_;
         float rpm_step_;
         int repeat_;
     };
